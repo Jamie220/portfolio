@@ -10,7 +10,7 @@ const App = ()=> {
     <div >
       <Navbar />
       <Logo />
-      <Intro />
+      <Intro/>
     </div>
   );
 }
