@@ -1,6 +1,5 @@
-import TweenMax from 'gsap';
-// import { TweenMax } from 'react-gsap';
-import React from 'react'
+import React from 'react';
+import {TweenMax } from 'gsap/all';
 import '../Intro/Intro.css';
 
 
@@ -8,19 +7,26 @@ import '../Intro/Intro.css';
 class Intro extends React.Component {
     constructor(props) {
         super(props);
-        this.introElement = null;//reference to the DOM node
-        this.introTween = null; //reference to the animation    
+        this.title = null;//reference to the DOM node
+        this.titleChars = null; //reference to the animation    
     }
 
 
 
     componentDidMount(i) {
+        // const mySplit = new SplitText(this.title,{
+        //     type : "words, chars",
+        //     position: "absolute"
+        // });
+
         const random = (min, max) => {
             return (
                 (Math.random() * (max - min)) + min
             );
         }
-        this.introTween = TweenMax.to(this.introElement, 2.5, {
+        const mySplit = this.title.split();        
+        this.titleChars = mySplit.chars; // array of DOM elements
+        TweenMax.staggerTo(this.titleChars, 2.5, {
             opacity: 0,
             x: random(-500, 500),
             y: random(-500, 500),
@@ -39,7 +45,7 @@ class Intro extends React.Component {
         return (
             <div>
                 <div className="box" >
-                    <p ref={div => this.introElement = div}>Hi I'm Jamie</p>
+                    <p ref={div => this.titleChars = div}>Hi I'm Jamie</p>
                 </div>
             </div>
         );
