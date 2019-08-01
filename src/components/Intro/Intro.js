@@ -7,8 +7,8 @@ const Intro = () => {
         <>
         <div style={{display:'flex',justifyContent:'center',alignItems:'center',height:'100%'}}>
             <main role="main" className="text-center inner cover">
-                <h1 className="cover-heading ">Hi, I'm Jamie</h1>
-                <p className="lead">a front end developer</p>
+                <h1 className="cover-heading animated animatedFadeInUp fadeInUp">Hi, I'm Jamie</h1>
+                <p className="lead animated animatedFadeInUp fadeInUp">a front end developer</p>
                    
             </main>
         </div>
