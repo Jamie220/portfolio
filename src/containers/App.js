@@ -5,12 +5,14 @@ import Logo from '../components/Logo/Logo'
 import Intro from '../components/Intro/Intro'
 
 
-const App = ()=> {
+const App = () => {
   return (
-    <div >
-      <Navbar />
-      <Logo />
-      <Intro/>
+    <div>
+      
+        <Navbar />
+        <Logo />
+        <Intro />
+      
     </div>
   );
 }
