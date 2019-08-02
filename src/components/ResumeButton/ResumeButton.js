@@ -7,7 +7,8 @@ const ResumeButton = () => {
         <div className ="text-center">
             <div className="btn">
                 <Tilt className="Tilt" options={{ max: 35 }} style={{ height: 100, width: 100 }} >
-                    <div className="Tilt-inner"><button onClick="" type="button" className="btn btn-secondary">Resume</button></div>
+                    <div className="Tilt-inner"><a href="https://drive.google.com/file/d/1y1ESNrxklNJxIcoS86D5fRoIyEHAs_is/view?usp=sharing" type="button" className="btn btn-secondary">Resume</a>
+                    </div>
                 </Tilt>
             </div>
         </div>
