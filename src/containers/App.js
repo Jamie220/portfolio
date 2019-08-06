@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import myInformation from '../myInformation'
 import Navbar from '../components/Navbar/Navbar';
 import Logo from '../components/Logo/Logo';
 import Intro from '../components/Intro/Intro';
@@ -16,8 +17,8 @@ const App = () => {
       
         <Navbar />
         <Logo />
-        <Intro />
-        <About />
+        <Intro myInformation={myInformation} />
+        <About myInformation={myInformation} />
       
     </div>
   );
