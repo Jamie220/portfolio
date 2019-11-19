@@ -19,9 +19,9 @@ const About = () => {
                         <Fade bottom duration={1000} delay={600} distance="30px">
                             <div className="about-wrapper__image">
                                 <img
-                                    className="img-fluid rounded-circle shadow-lg"
+                                    className="img-fluid rounded shadow-lg"
                                     height="auto"
-                                    width="350px"
+                                    width="300px"
                                     src={img}
                                     alt="Profile"
                                 />
