@@ -27,7 +27,7 @@ const Intro = () => {
                     delay={1000}
                     distance="30px"
                 >
-                    <h1 className="intro-subTitle">{subtitle}</h1>
+                    <h1 className="intro-subTitle">I am a {subtitle}</h1>
                 </Bounce>
                 <Fade
                     duration={1000}
