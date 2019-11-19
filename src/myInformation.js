@@ -2,6 +2,6 @@
 export const mainData = {
     title: 'Hi, my name is',
     name: 'Jamie Wang',
-    subtitle:'I build for the web.',
+    subtitle:'I am a front end developer',
     cta: 'Know More',
 };
