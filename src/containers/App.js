@@ -1,5 +1,4 @@
 import React, { useState, useEffect} from 'react';
-import './App.css';
 import {mainData} from '../myInformation';
 import Navbar from '../components/Navbar/Navbar';
 // import Logo from '../components/Logo/Logo';

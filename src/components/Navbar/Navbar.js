@@ -1,6 +1,6 @@
 import React from 'react';
 // import Logo from '../Logo/Logo'
-import '../Navbar/Navbar.css'
+
 
 const Navbar = () => {
     return(
