@@ -40,24 +40,22 @@ const Projects = () => {
                   >
                     <div className="project-wrapper__text">
                       <h3 className="project-wrapper__text-title">
-                        {title || 'Project Title'}
+                        {title}
                       </h3>
 
                       <div>
                         <p>
-                          {info ||
-                            'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'}
+                          {info}
                         </p>
                         <p className="mb-4">
-                          {info2 || ''
-                          }
+                          {info2}
                         </p>
                       </div>
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cta-btn cta-btn--hero"
-                        href={url || '#!'}
+                        href={url}
                       >
                         See Live
                       </a>
@@ -66,10 +64,10 @@ const Projects = () => {
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="cta-btn text-color-main"
+                          className="cta-btn"
                           href={repo}
                         >
-                          Source Code
+                          GitHub
                         </a>
                       )}
                     </div>
@@ -85,7 +83,7 @@ const Projects = () => {
                   >
                     <div className="project-wrapper__image">
                       <a
-                        href={url || '#!'}
+                        href={url}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -105,7 +103,7 @@ const Projects = () => {
                           <div data-tilt className="thumbnail rounded">
                             <img
                               className="img-fluid"
-                              src={img || './assets/banner.png'}
+                              src={img}
                               alt="Project"
                             />
                           </div>

@@ -61,3 +61,10 @@ export const projectsData = [
     img: './images/GBCAmoodle.png',
   },
 ];
+
+// contact data
+export const contactData = {
+  subtitle:'Have a question or want to work together?',
+  btn: "Contact Me",
+  email: 'jamiewang220@gmail.com',
+};
