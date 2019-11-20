@@ -6,7 +6,7 @@ const Footer = () => {
   const {socialMedias} = footer;
 
   return(
-    <footer>
+    
     <footer className="footer navbar-static-bottom">
       <div className="container">
         <a href="#top" className="back-to-top">
@@ -50,8 +50,7 @@ const Footer = () => {
       </div>
     </footer>
   );
-    </footer>
-  )
+
 }
 
 export default Footer;
