@@ -68,3 +68,25 @@ export const contactData = {
   btn: "Contact Me",
   email: 'jamiewang220@gmail.com',
 };
+
+//footer data
+export const footerData = {
+  socialMedia: [
+    {
+      name: 'twitter',
+      url: 'https://twitter.com/3602239',
+    },
+    {
+      name:'codepen',
+      url: 'https://codepen.io/JamieWang',
+    },
+    {
+      name: 'linkedin',
+      url: 'https://www.linkedin.com/in/jamiewang220/',
+    },
+    {
+      name: 'github',
+      url:'https://github.com/Jamie220',
+    }
+  ],
+};
