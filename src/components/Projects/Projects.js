@@ -1,50 +1,126 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import Fade from 'react-reveal/Fade';
+import Tilt from 'react-tilt';
+import PortfolioContext from '../../context';
+import Title from '../Title/Title';
 
-class Projects extends React.Component {
-    render(props) {
-        let myInformation = this.props.myInformation;
-        return (
-            <>
-                <section id="Projects">
-                    <div className="container">
-                        <div className ="row">
-                            <div className="col">
-                                <h2>Projects</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-sm d-flex">
-                                <div className="card flex-fill">
-                                    <img className="card-img-top" src="./images/portfolio_pic.jpg" alt="projects images"/>
-                                    <div className="card-body">
-                                        Proident sint dolor proident Lorem eiusmod ea adipisicing dolore ea deserunt eiusmod quis velit. Sunt dolor incididunt non elit exercitation adipisicing esse veniam nulla sint reprehenderit Lorem mollit adipisicing. Ipsum minim amet mollit aliqua occaecat. Est velit veniam laboris aliquip enim nostrud nisi dolore. Mollit nostrud Lorem veniam occaecat.
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-sm d-flex">
-                                <div className="card flex-fill">
-                                    <img className="card-img-top" src="./images/portfolio_pic.jpg" alt="projects images"/>
-                                    <div className="card-body">
-                                        Proident sint dolor proident Lorem eiusmod ea adipisicing dolore ea deserunt eiusmod quis velit. Sunt dolor incididunt non elit exercitation adipisicing esse veniam nulla sint reprehenderit Lorem mollit adipisicing. Ipsum minim amet mollit aliqua occaecat. Est velit veniam laboris aliquip enim nostrud nisi dolore. Mollit nostrud Lorem veniam occaecat.
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-sm d-flex">
-                                <div className="card flex-fill">
-                                    <img className="card-img-top" src="./images/portfolio_pic.jpg" alt="projects images"/>
-                                    <div className="card-body">
-                                        Proident sint dolor proident Lorem eiusmod ea adipisicing dolore ea deserunt eiusmod quis velit. Sunt dolor incididunt non elit exercitation adipisicing esse veniam nulla sint reprehenderit Lorem mollit adipisicing. Ipsum minim amet mollit aliqua occaecat. Est velit veniam laboris aliquip enim nostrud nisi dolore. Mollit nostrud Lorem veniam occaecat.
-                                    </div>
-                                </div>
-                            </div>
+const Projects = () => {
+  const { projects } = useContext(PortfolioContext);
 
-                        </div>
-                    </div>
-                </section>
-            </>
-        );
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth > 769) {
+      setIsDesktop(true);
+      setIsMobile(false);
+    } else {
+      setIsMobile(true);
+      setIsDesktop(false);
     }
-}
+  }, []);
+
+  return (
+    <section id="projects">
+      <div className="container">
+        <div className="project-wrapper">
+          <Title title="Projects" />
+          {projects.map((project, index) => {
+            const { title, info, info2, url, repo, img } = project;
+
+            return (
+              <div className="row" key={index}>
+                <div className="col-lg-4 col-sm-12">
+                  <Fade
+                    left={isDesktop}
+                    bottom={isMobile}
+                    duration={1000}
+                    delay={500}
+                    distance="30px"
+                  >
+                    <div className="project-wrapper__text">
+                      <h3 className="project-wrapper__text-title">
+                        {title || 'Project Title'}
+                      </h3>
+
+                      <div>
+                        <p>
+                          {info ||
+                            'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'}
+                        </p>
+                        <p className="mb-4">
+                          {info2 || ''
+                          }
+                        </p>
+                      </div>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cta-btn cta-btn--hero"
+                        href={url || '#!'}
+                      >
+                        See Live
+                      </a>
+
+                      {repo && (
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="cta-btn text-color-main"
+                          href={repo}
+                        >
+                          Source Code
+                        </a>
+                      )}
+                    </div>
+                  </Fade>
+                </div>
+                <div className="col-lg-8 col-sm-12">
+                  <Fade
+                    left={isDesktop}
+                    bottom={isMobile}
+                    duration={1000}
+                    delay={1000}
+                    distance="30px"
+                  >
+                    <div className="project-wrapper__image">
+                      <a
+                        href={url || '#!'}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Tilt
+                          options={{
+                            reverse: false,
+                            max: 8,
+                            perspective: 1000,
+                            scale: 1,
+                            speed: 300,
+                            transition: true,
+                            axis: null,
+                            reset: true,
+                            easing: 'cubic-bezier(.03,.98,.52,.99)',
+                          }}
+                        >
+                          <div data-tilt className="thumbnail rounded">
+                            <img
+                              className="img-fluid"
+                              src={img || './assets/banner.png'}
+                              alt="Project"
+                            />
+                          </div>
+                        </Tilt>
+                      </a>
+                    </div>
+                  </Fade>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export default Projects;
