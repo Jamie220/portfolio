@@ -5,17 +5,19 @@ import Intro from '../components/Intro/Intro';
 import About from '../components/About/About';
 import Projects from '../components/Projects/Projects';
 import ContactMe from '../components/ContactMe/ContactMe';
-// import Footer from '../components/Footer/Footer';
+import Footer from '../components/Footer/Footer';
 
 import {
   mainData,
   aboutData,
   projectsData,
   contactData,
+  footerData,
 } from '../myInformation';
 
 
 import { PortfolioProvider } from '../context';
+
 
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
   const [about, setAboutData] = useState({});
   const [projects, setProjectsData] = useState([]);//project data is an array []
   const [contact, setContactData] = useState({});
+  const [footer, setFooterData] = useState({});
   
 
 
@@ -30,17 +33,19 @@ function App() {
     setMainData({ ...mainData });
     setAboutData({...aboutData});
     setProjectsData([...projectsData]);//project data is an array []
-    setContactData({...contactData})
+    setContactData({...contactData});
+    setFooterData({...footerData})
   },[]);
 
   return(
-    <PortfolioProvider value ={{main, about, projects, contact}}>
+    <PortfolioProvider value ={{main, about, projects, contact, footer}}>
       <Navbar />
       {/* <Logo /> */}
       <Intro />
       <About />
       <Projects />
       <ContactMe />
+      <Footer />
     </PortfolioProvider>
   )
 }

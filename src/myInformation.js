@@ -71,7 +71,7 @@ export const contactData = {
 
 //footer data
 export const footerData = {
-  socialMedia: [
+  socialMedias: [
     {
       name: 'twitter',
       url: 'https://twitter.com/3602239',
@@ -89,4 +89,4 @@ export const footerData = {
       url:'https://github.com/Jamie220',
     }
   ],
-};
+}; 
