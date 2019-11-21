@@ -24,7 +24,7 @@ export const projectsData = [
     title:'Burger Builder',
     info: 'A powerful, fast, user-friendly and reactive web app build by React&Redux',
     info2: 'I used React, Redux, and Next.js in order to create this web application',
-    url: 'https://www.google.com.au/',
+    url: 'https://serene-bhaskara-e066b0.netlify.com',
     repo: 'https://github.com/Jamie220/react-burger-builder',
     img: './images/burgerBuilder.png',
   },
