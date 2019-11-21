@@ -10,7 +10,7 @@ export const mainData = {
 export const aboutData = {
     img: './images/portfolio_pic.jpg',
     paragraphOne:
-    "I'm the Front-End Developer from China live in Melbroune.",
+    "I'm a Front-End Developer from China live in Melbroune.",
   paragraphTwo:
     'I have serious passion for front end development, UI effects, animations and creating intuitive, dynamic user experiences.',
   paragraphThree:
@@ -22,8 +22,8 @@ export const aboutData = {
 export const projectsData = [
   {
     title:'Burger Builder',
-    info: 'A powerful, fast, user-friendly and reactive web app build by React&Redux',
-    info2: 'I used React, Redux, and Next.js in order to create this web application',
+    info: 'A powerful, fast, user-friendly and reactive web app build by React&Redux.',
+    info2: 'I used React, Redux, and Next.js in order to create this web application.',
     url: 'https://serene-bhaskara-e066b0.netlify.com',
     repo: 'https://github.com/Jamie220/react-burger-builder',
     img: './images/burgerBuilder.png',
@@ -38,15 +38,15 @@ export const projectsData = [
   },
   {
     title: 'Ivy Real Estate website',
-    info: 'A commercial website build for Ivy Real Estate company by using WordPress, PHP, JavaScript, CSS. This web allows you search accommodation whether rent or buy',
-    info2: 'This is my first freelance project when I first year working in GBCA',
+    info: 'A commercial website build for Ivy Real Estate company by using WordPress, PHP, JavaScript, CSS. This web allows you search accommodation whether rent or buy.',
+    info2: 'This is my first freelance project when I first year working in GBCA.',
     url: 'http://ivyrealestate.com.au/',
     repo:'',//if no repo, the button will not show up
     img:'./images/IvyRealEstate.png',
   },
   {
     title:'GBCA web',
-    info: 'A commercial web build for Global Business College of Australia by using WordPress, PHP, JavaScript, CSS',
+    info: 'A commercial web build for Global Business College of Australia by using WordPress, PHP, JavaScript, CSS.',
     info2: 'This project I am working with when I work at GBCA.',
     url: 'https://gbca.edu.au',
     repo:'',
@@ -54,8 +54,8 @@ export const projectsData = [
   },
   {
     title: 'GBCA Moddle',
-    info: 'A online learning management system platform bulid for Global Business College of Australia', 
-    info2: 'I build up this app start from zero, which establish at own server',
+    info: 'A online learning management system platform bulid for Global Business College of Australia.', 
+    info2: 'I build up this app start from zero, which establish at own server.',
     url: 'http://ecs.gbca.edu.au',
     repo: '',
     img: './images/GBCAmoodle.png',
