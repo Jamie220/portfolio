@@ -32,21 +32,27 @@ const Footer = () => {
 
         <hr />
 
-        {/* <p className="footer__text">
+        <p className="footer__text">
           © 2019 - Developed with
+          <i
+            style={{ color: '#a8630f', fontSize: '1.8rem' }}
+            className="fa fa-coffee px-2"
+          />
+           and 
           <i
             style={{ color: '#dc3545', fontSize: '1.8rem' }}
             className="fa fa-heart px-2"
           />
           by{' '}
           <a
-            href="https://github.com/covidev"
+            href="https://github.com/Jamie220"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Jacobo Martínez
+            Jamie Wang
           </a>
-        </p> */}
+          {' '}and many thanks with Jacobo Martínez
+        </p>
       </div>
     </footer>
   );
