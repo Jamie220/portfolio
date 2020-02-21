@@ -15,7 +15,7 @@ export const aboutData = {
     'I have serious passion for front end development, UI effects, animations and creating intuitive, dynamic user experiences.',
   paragraphThree:
     "Let's create something incredible!",
-  resume: 'https://drive.google.com/file/d/1y1ESNrxklNJxIcoS86D5fRoIyEHAs_is/view?usp=sharing', // if no resume, the button will not show up
+  resume: 'https://drive.google.com/file/d/1olLKp8qJYpPbjwoT3DL04h6mHCIyUvVg/view?usp=sharing', // if no resume, the button will not show up
 };
 
 // Projects
