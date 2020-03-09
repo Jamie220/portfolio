@@ -6,7 +6,7 @@ import PortfolioContext from '../../context';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faHtml5, faCss3Alt, faJs, faWordpress, faReact, faGitAlt, faBootstrap, faNodeJs } from '@fortawesome/free-brands-svg-icons';
 
-const About = () => {
+const About = (props) => {
     const { about } = useContext(PortfolioContext);
     const { img, paragraphOne, paragraphTwo, paragraphThree, resume } = about;
 

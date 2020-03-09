@@ -8,6 +8,13 @@ $dark-grey: #333333;
 
 $dark-blue-text: #272341; // For Headings
 
+//For Navbar checkbox
+// $color_checkbox_success:#4cd964;
+$color_checkbox_default:#8E8E93;
+$transition: .25s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$width: 5em;
+$height: $width/2;
+
 // FONT SIZE
 $default-font-size: 1.6rem;
 $big-font-size: 4rem;

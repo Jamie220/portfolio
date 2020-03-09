@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar/Navbar';
 // import Logo from '../components/Logo/Logo';
 import Intro from '../components/Intro/Intro';
@@ -26,24 +26,44 @@ function App() {
   const [projects, setProjectsData] = useState([]);//project data is an array []
   const [contact, setContactData] = useState({});
   const [footer, setFooterData] = useState({});
-  
 
 
-  useEffect(()=>{
+
+  useEffect(() => {
     setMainData({ ...mainData });
-    setAboutData({...aboutData});
+    setAboutData({ ...aboutData });
     setProjectsData([...projectsData]);//project data is an array []
-    setContactData({...contactData});
-    setFooterData({...footerData})
-  },[]);
+    setContactData({ ...contactData });
+    setFooterData({ ...footerData })
+  }, []);
 
-  return(
-    <PortfolioProvider value ={{main, about, projects, contact, footer}}>
-      <Navbar />
+  //dark-mode && light-mode style:
+  const darkModeNav = { backgroundColor: "#1b2938" };
+  const darkMode = { backgroundColor: "#1a1919", color: "#999" };
+  const lightMode = {transition: 'background-color 0.25s ease-out'}
+
+  const [dark, setDark] = useState(getInitialMode());
+
+  useEffect(() => {
+    localStorage.setItem('dark', JSON.stringify(dark))
+  }, [dark])
+
+  function getInitialMode() {
+    const savedMode = JSON.parse(localStorage.getItem('dark'))
+    return savedMode || false;
+  }
+
+  return (
+    <PortfolioProvider value={{ main, about, projects, contact, footer }}>
+      <Navbar
+        style={dark ? darkModeNav : lightMode}
+        setDarkMode={() => setDark(prevMode => !prevMode)}
+        value={!dark}
+      />
       {/* <Logo /> */}
-      <Intro />
+      <Intro style={dark ? darkMode : lightMode} />
       <About />
-      <Projects />
+      <Projects style={dark ? darkMode : lightMode} />
       <ContactMe />
       <Footer />
     </PortfolioProvider>
