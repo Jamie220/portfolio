@@ -4,7 +4,7 @@ import Tilt from 'react-tilt';
 import PortfolioContext from '../../context';
 import Title from '../Title/Title';
 
-const Projects = () => {
+const Projects = (props) => {
   const { projects } = useContext(PortfolioContext);
 
   const [isDesktop, setIsDesktop] = useState(false);
@@ -21,7 +21,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects">
+    <section id="projects" style={props.style}>
       <div className="container">
         <div className="project-wrapper">
           <Title title="Projects" />

@@ -4,13 +4,13 @@ import Fade from 'react-reveal/Fade';
 import Bounce from 'react-reveal/Bounce';
 import PortfolioContext from '../../context';
 
-const Intro = () => {
+const Intro = (props) => {
     const { main } = useContext(PortfolioContext);
     const { title, name, subtitle, cta } = main;
 
 
     return (
-        <section id="intro" className="jumbotron">
+        <section id="intro" className="jumbotron" style={props.style}>
             <Container >
                 <Fade
                     duration={1000}
